@@ -1,10 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-import 'package:organizer_app/category.dart';
-
-import 'package:organizer_app/todo.dart';
+import 'file:///C:/Users/user/AndroidStudioProjects/organizer_app/lib/data/category.dart';
+import 'file:///C:/Users/user/AndroidStudioProjects/organizer_app/lib/data/todo.dart';
 import 'package:intl/intl.dart';
+import 'package:organizer_app/constants.dart';
 
 class ButtonPage extends StatefulWidget {
   @override
@@ -34,7 +33,7 @@ class _ButtonPageState extends State<ButtonPage> {
     categories.forEach((category) {
       setState(() {
         _categories.add(DropdownMenuItem(
-          child: Text('tit'),
+          child: Text('ohj'),
         ));
       });
     });

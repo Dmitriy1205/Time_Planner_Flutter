@@ -1,25 +1,26 @@
-import 'package:organizer_app/database_conection.dart';
+import 'file:///C:/Users/user/AndroidStudioProjects/organizer_app/lib/data/database_conection.dart';
 import 'package:sqflite/sqflite.dart';
 
-class Repository{
+class Repository {
   DatabaseConection _databaseConection;
 
-  Repository(){
+  Repository() {
     _databaseConection = DatabaseConection();
   }
   static Database _database;
 
-  Future <Database>  get database async{
+  Future<Database> get database async {
     if (_database != null) return _database;
     _database = await _databaseConection.setDataBase();
     return _database;
   }
 
-  insertData (table, data) async{
+  insertData(table, data) async {
     var connection = await database;
     return await connection.insert(table, data);
   }
-  readData (table) async{
+
+  readData(table) async {
     var connection = await database;
     return await connection.query(table);
   }
